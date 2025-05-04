@@ -1,5 +1,5 @@
 import React from 'react';
-import WebcamCapture from './src/components/WebcamCapture.tsx';
+import WebcamCapture from './components/WebcamCapture';
 import { useSelector } from 'react-redux';
 import { RootState } from './app/store';
 
@@ -7,14 +7,15 @@ const App: React.FC = () => {
   const faces = useSelector((state: RootState) => state.face.boxes);
 
   return (
-    <div className="text-center">
-      <h1 className="text-2xl font-bold">👁️ Facial Recognition App</h1>
-      <div className="relative inline-block">
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-start py-8">
+      <h1 className="text-4xl font-bold text-yellow-300 mb-6">Facial Recognition App</h1>
+
+      <div className="relative border-4 border-yellow-400 rounded-lg overflow-hidden w-fit">
         <WebcamCapture />
         {faces.map((face, idx) => (
           <div
             key={idx}
-            className="absolute border-2 border-red-500"
+            className="absolute border-2 border-red-500 text-xs text-white bg-black bg-opacity-70 px-1"
             style={{
               top: face.top,
               left: face.left,
@@ -22,9 +23,7 @@ const App: React.FC = () => {
               height: face.height,
             }}
           >
-            <div className="bg-black text-white text-xs p-1 absolute bottom-0">
-              {face.gender}, {face.age}
-            </div>
+            {face.gender}, {face.age}
           </div>
         ))}
       </div>
