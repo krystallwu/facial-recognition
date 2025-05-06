@@ -8,7 +8,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-start py-8">
-      <h1 className="text-4xl font-bold text-yellow-300 mb-6">Facial Recognition App</h1>
+      <h1 className="text-4xl font-bold text-yellow-300 mb-6">Facial Recognition</h1>
 
       <div className="relative border-4 border-yellow-400 rounded-lg overflow-hidden w-fit">
         <WebcamCapture />
