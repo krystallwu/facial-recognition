@@ -32,7 +32,9 @@ This web application enables real-time facial recognition directly in the browse
 - Allowed face detection and registered user who was detected. The features of the user would then be recognized using the pre-trained models and facial detection would be complete.
 
 
-Ranking my abilities for each skill on a scale of 1-10:
+## Other questions
+
+### Ranking my abilities for each skill on a scale of 1-10:
 
 JS: 6
 
